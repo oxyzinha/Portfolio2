@@ -1,0 +1,210 @@
+/* styles.css */
+body {
+    font-family: sans-serif;
+    background-color: #ffffff;
+    font-weight: bold;
+}
+
+.text-box {
+    margin-left: 44vw;
+	 margin-top: 42vh;
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: absolute;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #777;
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-white::after {
+    background-color: #fff;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-animated {
+    animation: moveInBottom 5s ease-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+header {
+    background-color: #000000;
+    color: #fff;
+    padding: 05px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-icons {
+    margin-right: 20px;
+}
+
+.social-icons ul {
+    padding: 0;
+}
+
+.social-icons ul li {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.social-icons ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-icons ul li img {
+    width: 50px; /* ajuste o tamanho conforme necessário */
+    height: auto; /* mantém a proporção da imagem */
+}
+
+.blob-btn {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #982a67;
+    color: #000;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    overflow: hidden;
+}
+
+.blob-btn:hover .blob-btn__blob {
+    animation: blob-animate 1.5s infinite;
+}
+
+.blob-btn__inner {
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+.blob-btn__blobs {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.blob-btn__blob {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: #000;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+.blob-btn__blob:nth-child(1) {
+    top: -10%;
+    left: 20%;
+    animation-delay: 0.2s;
+}
+
+.blob-btn__blob:nth-child(2) {
+    top: -10%;
+    left: 50%;
+    animation-delay: 0.5s;
+}
+
+.blob-btn__blob:nth-child(3) {
+    top: 70%;
+    left: 20%;
+    animation-delay: 0.7s;
+}
+
+.blob-btn__blob:nth-child(4) {
+    top: 70%;
+    left: 50%;
+    animation-delay: 1s;
+}
+
+@keyframes blob-animate {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.3);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* Estilos adicionais conforme necessário */
