@@ -1,9 +1,59 @@
+/* Adicione este estilo para criar a "mancha de tinta" */
+/* Adicione este estilo para criar a "mancha de tinta" */
+.avatar-background {
+    position: absolute;
+    top: 300%; /* Posiciona a mancha de tinta na metade superior */
+    left: 70%; /* Posiciona a mancha de tinta na metade da tela horizontalmente */
+    transform: translate(-50%, -50%); /* Centraliza a mancha de tinta */
+    width: 300px; /* Ajuste a largura conforme necessário */
+    height: 300px; /* Ajuste a altura conforme necessário */
+    background-color: #982a67; /* Cor da mancha de tinta */
+    border-radius: 50%; /* Forma circular */
+    z-index: -1; /* Coloca a mancha de tinta atrás do conteúdo */
+}
+
+.avatar-image {
+    position: absolute;
+    top: 50%; /* Posiciona o GIF no centro verticalmente */
+    left: 70%; /* Posiciona o GIF no centro horizontalmente */
+    transform: translate(-50%, -50%); /* Centraliza o GIF */
+    width: 150px; /* Ajuste o tamanho do GIF conforme necessário */
+    height: 150px; /* Ajuste o tamanho do GIF conforme necessário */
+    z-index: 0; /* Garante que o GIF esteja atrás da mancha de tinta */
+}
+
+.avatar-gif {
+    width: 100%; /* Garante que o GIF ocupe toda a largura do contêiner */
+    height: 100%; /* Garante que o GIF ocupe toda a altura do contêiner */
+    object-fit: cover; /* Mantém a proporção do GIF */
+    border-radius: 50%; /* Forma circular */
+}
+
+
+/* Restante dos estilos permanece o mesmo */
+
+
+/* Adicione este estilo para posicionar a mancha de tinta */
+header {
+    position: relative; /* Define o contexto para o posicionamento relativo */
+    padding: 20px;
+    background-color: #000000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 /* styles.css */
 body {
-    font-family: sans-serif;
+    font-family: Poppins, sans-serif;
     background-color: #ffffff;
     font-weight: bold;
 }
+
+h1 {
+    font-family: 'Abril Fatface', serif;
+    font-size: 46px;  
+  }
 
 .text-box {
     margin-left: 44vw;
@@ -205,6 +255,8 @@ nav ul li a {
         transform: scale(1);
     }
 }
+
+
 
 
 /* Estilos adicionais conforme necessário */
